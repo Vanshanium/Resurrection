@@ -78,8 +78,10 @@ clear
 # I fuck up my exam due to this!
 echo ""
 sudo snap install telegram-desktop 
+clear
 
-# This one as well
+
+# This one as well Install the bashrc and the inputrc
 
 #!/bin/bash
 
@@ -89,6 +91,10 @@ sudo snap install telegram-desktop
 #Downloading Python.... for fastest Deployment
 
 # sudo apt install python 
+
+
+
+
 
 # Installation of the cursor - 
 
@@ -119,6 +125,10 @@ sudo ./Elegant-grub2-themes/install.sh
 
 sudo rm -r ./Elegent*
 
+ehco "The GRUB is done moving to the GITHUB"
+
+clear
+
 # Setting Up the GITHUB 
 
 echo "Setting up GitHub!!!!!!................"
@@ -136,3 +146,5 @@ cat ~/.ssh/Github.pub | xclip -selection clipboard
 xdg-open "https://github.com/settings/ssh/new"
 
 ssh -T git@github.com
+
+clear
