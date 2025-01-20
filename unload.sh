@@ -15,6 +15,8 @@ sudo apt install vlc
 sudo apt install git
 sudo apt install xclip
 
+
+
 # sudo apt install for the matrix one!!!
 neofetch
 
@@ -54,6 +56,17 @@ sudo apt install snap # Seeing if the Snap is installed or not (Fail safe)
 sudo snap install --classic code 
 
 clear
+
+# Installing C++ 
+
+sudo apt install build-essential # This will install all the packages below
+
+sudo apt install g++
+sudo apt install gdb
+sudo apt install cmake 
+sudo apt install make
+
+
 
 #Installing You guessed it!!!!
 
