@@ -57,7 +57,7 @@ sudo snap install --classic code
 
 clear
 
-# Installing C++ 
+# Installing C++ // Make a module that ask for the setup of the certain envirnment!
 
 sudo apt install build-essential # This will install all the packages below
 
@@ -66,7 +66,9 @@ sudo apt install gdb
 sudo apt install cmake 
 sudo apt install make
 
-
+# Installing Nodejs and npm // A module for Web development 
+sudo apt intall nodejs
+sudo apt install npm
 
 #Installing You guessed it!!!!
 
