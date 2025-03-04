@@ -163,3 +163,14 @@ xdg-open "https://github.com/settings/ssh/new"
 ssh -T git@github.com
 
 clear
+
+# Setting Up Shell              //done last 
+
+sudo apt install zsh 
+chsh -s $(which zsh)
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+curl -s https://ohmyposh.dev/install.sh | bash -s 
+
