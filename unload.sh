@@ -14,7 +14,7 @@ sudo apt install transmission
 sudo apt install vlc
 sudo apt install git
 sudo apt install xclip
-
+sudo apt install imagemagick # This is for image convert!
 
 
 # sudo apt install for the matrix one!!!
