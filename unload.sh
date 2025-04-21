@@ -17,6 +17,8 @@ sudo apt install xclip
 sudo apt install imagemagick # This is for image convert!
 
 
+
+
 # sudo apt install for the matrix one!!!
 neofetch
 
@@ -182,3 +184,13 @@ rm ~/.zshrc
 mv ./Setup_files/.zshrc 
 zsh
 
+
+
+# Rofi and Emoji 
+
+
+sudo apt isntall rofi 
+
+# clone the themes 
+# Build Rofi Emogi :    https://github.com/Mange/rofi-emoji
+#  Get the theme :      git@github.com:newmanls/rofi-themes-collection.git
