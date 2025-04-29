@@ -193,4 +193,4 @@ sudo apt isntall rofi
 
 # clone the themes 
 # Build Rofi Emogi :    https://github.com/Mange/rofi-emoji
-#  Get the theme :      git@github.com:newmanls/rofi-themes-collection.git
+#  Get the theme :      git@github.com:newmanls/rofi-themes-collection.git or https://github.com/adi1090x/rofi?tab=readme-ov-file
