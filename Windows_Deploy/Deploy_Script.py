@@ -70,10 +70,9 @@ for package_name, url in Packages.items():
 print("Installation Done!!")
 
 
-print("Install the MegaCMD manually!!!")
-response = input("Do you want to Run the Activator??")
+response = input("Do you want to Installl other Softwares?")
 
 if response in ["yes","YES","Y","y"]:
-    os.system("python Activator.py")
+    os.system("python Operational.py")
 
 shutil.rmtree(folder_path) # Remove the Setup files.
