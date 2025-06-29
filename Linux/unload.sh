@@ -162,6 +162,9 @@ cat ~/.ssh/Github.pub | xclip -selection clipboard
 
 xdg-open "https://github.com/settings/ssh/new"
 
+eval "$(ssh-agent -s)"          # Start The SSH Agent 
+ssh-add ~/.ssh/Github           # Add Private Key to the SSH Agent
+
 ssh -T git@github.com
 
 clear
