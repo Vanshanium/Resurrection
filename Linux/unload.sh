@@ -165,6 +165,7 @@ xdg-open "https://github.com/settings/ssh/new"
 eval "$(ssh-agent -s)"          # Start The SSH Agent 
 ssh-add ~/.ssh/Github           # Add Private Key to the SSH Agent
 
+
 ssh -T git@github.com
 
 clear
@@ -184,7 +185,7 @@ mkdir ~/.poshthemes/
 mv ./Setup_files/creeper.json ~/.poshthemes/
 
 rm ~/.zshrc 
-mv ./Setup_files/.zshrc 
+cp ./Setup_files/.zshrc ~/
 zsh
 
 
