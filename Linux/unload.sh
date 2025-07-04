@@ -1,4 +1,8 @@
-echo "Downloading Utilies....."
+source ./Variables.sh
+
+echo "Downloading Utilities....."
+chmod +x ./Utilities.sh
+./Utilities.sh
 
 #I am making Everything Automated 
 
@@ -12,8 +16,6 @@ sudo apt install sl
 sudo apt install curl
 sudo apt install transmission
 sudo apt install vlc
-sudo apt install git
-sudo apt install xclip
 sudo apt install imagemagick # This is for image convert!
 
 
@@ -23,25 +25,6 @@ sudo apt install imagemagick # This is for image convert!
 neofetch
 
 clear
-
-
-# Installing Chrome 
-
-echo "Downloading Google Chrome..."
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-echo "Installing Google Chrome..."
-sudo apt install -y ./google-chrome-stable_current_amd64.deb
-
-
-# Clean up the downloaded .deb file
-echo "Cleaning up..."
-rm google-chrome-stable_current_amd64.deb
-
-clear
-
-#Importing bashrc   
-
 
 #Setting Up MEGA
 
@@ -146,29 +129,7 @@ ehco "The GRUB is done moving to the GITHUB"
 
 clear
 
-# Setting Up the GITHUB 
 
-echo "Setting up GitHub!!!!!!................"
-
-ssh-keygen -t ed25519 -C "vansh.singh8272@gmail.com" -f ~/.ssh/Github
-
-echo "Past the Generated Key in the Github!!!!"
-
-cat ~/.ssh/Github.pub 
-
-echo "It is Copied to the clipboard!!!"
-
-cat ~/.ssh/Github.pub | xclip -selection clipboard
-
-xdg-open "https://github.com/settings/ssh/new"
-
-eval "$(ssh-agent -s)"          # Start The SSH Agent 
-ssh-add ~/.ssh/Github           # Add Private Key to the SSH Agent
-
-
-ssh -T git@github.com
-
-clear
 
 # Setting Up Shell              //done last 
 
