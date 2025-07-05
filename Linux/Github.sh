@@ -1,6 +1,7 @@
 source ./Variables.sh                                       # Loads Install command. 
 
-echo "Downloading Required Packages...."
+write_green "Downloading Required Packages \n"
+
 Install git
 Install xclip
 

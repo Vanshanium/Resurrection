@@ -6,16 +6,51 @@ OS_NAME=$(cat /etc/os-release | grep -w NAME | cut -d '=' -f2 | tr -d '"')
 
 Install_Command="sudo apt install -y "
 
+
 if [[ $OS_NAME =~ Arch ]];
 then
+    # Make a install command. 
     Install(){
 
         if pacman -Q $1 &>/dev/null; then
-            echo "$1 is already Installed!"
+            echo -e "\e[36m$1 \e[0m is already Installed!"
         else 
+            echo -e "\e[31mInstalling $1 \e[0m"
             sudo pacman -S $1
+            echo -e "\e[36m$1 \e[0m has been installed!"
         fi
     }
+
+    # Making the secondary Installer 
+    if ! pacman -Q yay &>/dev/null; then
+
+        echo "Installing the Secondary Installer : Yay"
+        read -p "Press [Enter] key to continue..."
+
+        Install git
+        Install base-devel
+
+        git clone https://aur.archlinux.org/yay.git
+        cd yay 
+        makepkg -si
+        cd ..
+        rm -rf yay
+        echo "Yay is now installed!"
+
+    fi
+
+    Install_yay(){
+        
+        if pacman -Q $1 &>/dev/null; then
+            echo -e "\e[36m$1 \e[0m is already Installed!"
+        else 
+            echo -e "\e[31mInstalling $1 \e[0m"
+            yay -S $1
+            echo -e "\e[36m$1 \e[0m has been installed!"
+        fi
+
+    }
+    
 
 elif [[ $OS_NAME =~ Ubuntu ]]; then
     Install(){
@@ -28,3 +63,10 @@ elif [[ $OS_NAME =~ Ubuntu ]]; then
 fi
 
 
+write_red(){
+    echo -e "\e[31m$1\e[0m"
+}
+
+write_green(){
+    echo -e "\e[32m$1\e[0m"
+}
