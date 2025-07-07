@@ -12,10 +12,15 @@ if [[ $OS_NAME =~ Arch ]]; then
 
     Install fastfetch
     Install rofi
-    Install thunar 
+    Install nautilus
     Install megacmd                 # Setup for Mega TODO
-    Install iwd
+    Install iwd                     # For WiFi management   
     Install spotify-launcher
+    Install grim                    # For screenshots
+    Install slurp                   # For screenshots
+    Install wl-clipboard            # For clipboard management
+    Install xclip                   # For clipboard management
+    Install tesseract               # For OCR Hin and Eng 
 
     Install_yay visual-studio-code-bin
     Install_yay microsoft-edge-stable-bin
