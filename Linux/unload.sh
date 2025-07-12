@@ -26,6 +26,12 @@ write_red "Setting up Dot Configs and Dotfiles..."
 mv ./Setup_files/Dotfiles/* ~/.config/
 
 
+#[........Network Manager.......]
+#To:do: Setup Network Manager using iwd
+
+
+#[.......Nvidea Graphic Drivers......]
+#Todo: Setup Nvidia Graphic Drivers, 
 
 # sudo apt update
 # sudo apt upgrade 

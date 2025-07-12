@@ -50,6 +50,21 @@ then
         fi
 
     }
+
+    #Installing Flatpak 
+    Install flatpak
+
+    Install_flatpak(){
+
+        if flatpak list --app | grep -qw "$1"; then
+            echo -e "\e[36m$1 \e[0m is already Installed!"
+        else
+            echo -e "\e[31mInstalling $1 \e[0m"
+            flatpak install -y flathub "$1"
+            echo -e "\e[36m$1 \e[0m has been installed!"
+        fi
+
+    }
     
 
 elif [[ $OS_NAME =~ Ubuntu ]]; then

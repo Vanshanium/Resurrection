@@ -7,7 +7,6 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install sl
     Install curl
     Install transmission-gtk
-    Install vlc
     Install imagemagick # This is for image convert!
 
     Install fastfetch
@@ -25,6 +24,11 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install_yay visual-studio-code-bin
     Install_yay microsoft-edge-stable-bin
     Install_yay figma-linux-bin
+
+    Install nvidia 
+    Install nvidia-utils
+
+    Install_flatpak org.videolan.VLC
 
 else
     Install_Command="sudo apt install -y "
