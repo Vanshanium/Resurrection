@@ -13,5 +13,7 @@ if [ "$bat_stat" = "discharging" ]; then
 fi
 
 if [ "$bat_stat" = "charging" ]; then
-    pkill -f "rofi.*-name batwarn"
+    if [ "$bat_lvl" -ge 85 ]; then
+        rofi -name batwarn -show img -modi img:echo -theme ~/.config/rofi/batwarn/80.rasi 
+    fi
 fi
