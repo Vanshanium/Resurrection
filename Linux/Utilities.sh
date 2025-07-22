@@ -33,3 +33,8 @@ if [[ $OS_NAME =~ Arch ]]; then
 else
     Install_Command="sudo apt install -y "
 fi
+
+
+cp ./Setup_files/todo ~/.local/bin/
+echo -e "\e[36mtodo \e[0m has been installed!"
+
