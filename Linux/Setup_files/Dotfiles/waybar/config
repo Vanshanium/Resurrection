@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "custom/launcher",
+        "cpu",
+        "custom/net_speed",
+        "memory"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "custom/net_speed": {
+        "exec": "~/.config/waybar/scripts/NetSpeed.sh",
+        "interval": 1,
+        "return-type": "text",
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/Wifi.sh"
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "clock": {
+        "format": "<b> 󰥔  {:%H:%M  󰃭  %d/%m} </b>",
+        "tooltip-format": "<b>Today is {:%A}</b>"
+    },
+    "backlight": {
+        "tooltip": false,
+        "format": " {}%",
+        "interval": 1,
+        "on-scroll-up": "brightnessctl s +5%",
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-click": "~/.config/waybar/scripts/NightLight.sh"
+    },
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "tags": {
+        "num-tags": 6
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+    "custom/power": {
+        "format": " ",
+        "on-click": "bash ~/.config/rofi/leave/leave.sh"
+    },
+    "hyprland/workspaces": {
+        "format": ""
+    }
+}

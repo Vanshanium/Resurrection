@@ -9,6 +9,7 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install transmission-gtk
     Install imagemagick # This is for image convert!
 
+    Install obsidian
     Install fastfetch
     Install rofi
     Install nautilus
@@ -28,7 +29,10 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install nvidia 
     Install nvidia-utils
 
+    Install nodejs npm
+
     Install_flatpak org.videolan.VLC
+    Install_flatpak com.discordapp.Discord
 
 else
     Install_Command="sudo apt install -y "
