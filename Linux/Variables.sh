@@ -69,12 +69,39 @@ then
 
 elif [[ $OS_NAME =~ Ubuntu ]]; then
     Install(){
-        if dpkg -s $1 &>/dev/null; then
-            echo "It is already Installed!"
+        if dpkg -s $1 &>/dev/null; then # This Logic is not working!
+            echo -e "\e[36m$1 \e[0m is already Installed!"
         else
-            sudo apt install -y $1
+            echo -e "\e[31mInstalling $1 \e[0m"
+            sudo apt install $1
+            echo -e "\e[36m$1 \e[0m has been installed!"
         fi
     }
+
+    Install_snap(){
+        if dpkg -s $1 &>/dev/null; then # This logic is not working Fix this.
+            echo -e "\e[36m$1 \e[0m is already Installed!"
+        else
+            echo -e "\e[31mInstalling $1 \e[0m"
+            snap install $1
+            echo -e "\e[36m$1 \e[0m has been installed!"
+        fi
+    }
+
+    Install flatpak
+    
+    Install_flatpak(){
+
+        if flatpak list --app | grep -qw "$1"; then
+            echo -e "\e[36m$1 \e[0m is already Installed!"
+        else
+            echo -e "\e[31mInstalling $1 \e[0m"
+            flatpak install -y flathub "$1"
+            echo -e "\e[36m$1 \e[0m has been installed!"
+        fi
+
+    }
+
 fi
 
 
@@ -85,3 +112,6 @@ write_red(){
 write_green(){
     echo -e "\e[32m$1\e[0m"
 }
+
+# Complete this!!! I have a exam tomorrow !!!!!
+# I fuck up my exam due to this!

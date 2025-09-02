@@ -3,6 +3,7 @@ source ./Variables.sh
 # Module to install utilities
 if [[ $OS_NAME =~ Arch ]]; then
 
+    Install zsh
     Install htop
     Install sl
     Install curl
@@ -35,7 +36,25 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install_flatpak com.discordapp.Discord
 
 else
-    Install_Command="sudo apt install -y "
+
+    Install zsh
+    Install htop
+    Install sl
+    Install curl
+    Install transmission-gtk
+    Install g++
+    Install gdb
+    Install cmake 
+    Install kitty
+    Install make
+
+
+    Install_snap whatsapp-linux-desktop
+    Install_snap figma-linux
+
+    Install_flatpak org.videolan.VLC
+    Install_flatpak com.discordapp.Discord
+
 fi
 
 
