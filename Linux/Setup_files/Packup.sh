@@ -31,3 +31,10 @@ write_green "Taking a Package Screenshot"
 sudo pacman -Q > Packages_Screenshot.txt
 sleep 1
 clear
+
+write_green "Packing up Custom Packages"
+rm -r ./Custom_Packages/*
+cp -r ~/.local/bin/* ./Custom_Packages/
+write_green "Custom Packages Packed"
+sleep 1
+clear

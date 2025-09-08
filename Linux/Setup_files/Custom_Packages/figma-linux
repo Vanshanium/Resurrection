@@ -1,0 +1,3 @@
+#!/bin/bash
+env -u WAYLAND_DISPLAY /usr/bin/figma-linux
+# /usr/bin/figma-linux --disable-gpu
