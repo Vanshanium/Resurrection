@@ -1,58 +1,45 @@
-# Setting up and setting the theme.
-
+#...............................Locale & Environment.........................#
 export LANG=en_US.UTF-8
 export ZSH="$HOME/.oh-my-zsh"
 
-# Case-sensitive completion must be off. _ and - will be interchangeable.
+#...............................SSH Agent for the Github.........................#
+eval "$(ssh-agent -s)"
+ssh-add -l | grep -q "Github" || ssh-add ~/.ssh/Github
+
+#...............................Zsh Options & Update Settings.........................#
 HYPHEN_INSENSITIVE="true"
-
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:update' frequency 30 # Days
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
+zstyle ':omz:update' mode reminder
+zstyle ':omz:update' frequency 30
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+#...............................Plugins.........................#
+plugins=(git extract zsh-autosuggestions)
 
-plugins=(git extract zsh-autosuggestions zsh-autosuggestions)
-
+#...............................Source Oh My Zsh.........................#
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/creeper.json)"
 source $ZSH/oh-my-zsh.sh
 
+#...............................Key Bindings.........................#
+bindkey '^H' backward-kill-word  # ctrl+backspace to delete word
 
-#  My Binding 
-
-bindkey '^H' backward-kill-word # cat and press ctrl+backspace it will give the combination
-
-# xmodmap -e "keycode 105 = Menu"
-
-# Aliases
-
+#...............................Aliases.........................#
 alias clip="xclip -selection clipboard"
 alias sleep="shutdown now"
+alias open="nautilus"
 
-# Work on this command !!!
-# alias refresh="rm -rf ~/.local/share/recently-used.xbel ~/.config/opera/Default/History ~/.config/opera/Default/History-journal && rm -rf '~/.config/opera/Default/Session Storage' ~/.config/opera/Default/Sessions"
+#...............................PATH.........................#
+export PATH=$PATH:$HOME/.local/bin
 
-#PATHS --where shell will search for commands 
-
-export PATH=$PATH:~/.local/bin
-
-
-# My Auto Complete 
-
-    # Pip 
-
+#...............................Auto Completion.........................#
 fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
 
-
+#...............................NVM (Node Version Manager).........................#
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
-
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/creeper.json)" 
+#...............................Clear Terminal On Load.........................#
+clear
+# This ensures that the terminal is cleared every time a new zsh session starts.

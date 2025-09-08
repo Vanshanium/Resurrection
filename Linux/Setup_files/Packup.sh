@@ -15,3 +15,19 @@ for package in "${packages[@]}"; do
 done
 
 write_green "Dotfiles Updated"
+sleep 1
+clear
+
+write_green "Updating the .zshrc file"
+rm ./.zshrc
+cp ~/.zshrc ./.zshrc
+write_green ".zshrc Updated"
+sleep 1
+clear
+
+#TODO Write a Grub and Get the Grub
+
+write_green "Taking a Package Screenshot"
+sudo pacman -Q > Packages_Screenshot.txt
+sleep 1
+clear
