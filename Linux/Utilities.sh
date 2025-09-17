@@ -26,6 +26,7 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install_yay visual-studio-code-bin
     Install_yay microsoft-edge-stable-bin
     Install_yay figma-linux-bin
+    Install_yay hyprpanel 
 
     Install nvidia 
     Install nvidia-utils
