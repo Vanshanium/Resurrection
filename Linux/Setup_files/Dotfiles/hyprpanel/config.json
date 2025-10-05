@@ -1,7 +1,7 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
   "theme.bar.floating": true,
-  "theme.bar.outer_spacing": "0.3em",
+  "theme.bar.outer_spacing": "1em",
   "theme.font.size": "1.1rem",
   "theme.bar.buttons.radius": "0.8em",
   "bar.workspaces.workspaces": 2,
@@ -476,7 +476,7 @@
   "menus.media.noMediaText": "No Media Currently Playing",
   "menus.media.displayTimeTooltip": true,
   "notifications.displayedTotal": 10,
-  "menus.volume.raiseMaximumVolume": false,
+  "menus.volume.raiseMaximumVolume": true,
   "menus.clock.time.military": true,
   "menus.clock.weather.location": "Ghar",
   "theme.bar.border_radius": "1em",
@@ -572,5 +572,6 @@
   "menus.dashboard.shortcuts.enabled": true,
   "bar.customModules.ram.round": true,
   "wallpaper.enable": false,
-  "theme.bar.menus.border.size": "0.2em"
+  "theme.bar.menus.border.size": "0.2em",
+  "theme.bar.buttons.clock.enableBorder": true
 }

@@ -49,3 +49,5 @@ Color ▸ Mix ▸ Alpha Over
    Chassis
    default2
    default
+Color ▸ Mix Color ▸ Color
+Input ▸ RGB

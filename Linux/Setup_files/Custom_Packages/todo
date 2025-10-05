@@ -45,6 +45,15 @@ def add_category(cat_name):
         f.write("")
 
 def add_task(cat_name,task):
+    if cat_name == "L":
+        cat_name =  'Linux'
+    elif cat_name == "C":
+        cat_name = 'Career'
+    elif cat_name == "S":
+        cat_name = 'School'
+    else: 
+        cat_name =  'Miscellaneous'
+        
     task = task.strip()
     with open(folder + "/" + cat_name, "a") as f:
         f.write(task + "\n")
