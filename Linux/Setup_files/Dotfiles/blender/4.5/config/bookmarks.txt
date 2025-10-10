@@ -1,0 +1,12 @@
+[Bookmarks]
+[Recent]
+/mnt/Coconuts/SIH/Stick/
+/usr/share/blender/4.5/datafiles/studiolights/world/
+/home/voob/Desktop/SIH_Model/Blind_Stick/
+/home/voob/Downloads/ESP32-DEVKITC-32D/
+/home/voob/Downloads/
+/home/voob/Desktop/SIH_Model/
+/mnt/Coconuts/SIH_Model/
+/mnt/Coconuts/SIH_Model/Renders/
+/mnt/Coconuts/SIH_Model/Textures/
+/mnt/Coconuts/Blender_files/Blender_Addons/

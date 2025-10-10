@@ -53,7 +53,7 @@ def add_task(cat_name,task):
         cat_name = 'School'
     else: 
         cat_name =  'Miscellaneous'
-        
+
     task = task.strip()
     with open(folder + "/" + cat_name, "a") as f:
         f.write(task + "\n")
@@ -74,7 +74,7 @@ def remove_task(task):
                 else:
                     with open(done_file, "a") as df:
                         timestamp = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
-                        df.write(f"[{file}] {task} : {timestamp}\n")
+                        df.write(f"[{file}], {task} , {timestamp}\n")
 
 def delete_category(cat_name):
     try:
@@ -83,6 +83,10 @@ def delete_category(cat_name):
         print(color_text(f"Category '{cat_name}' does not exist.", "33"))
         return
     print(color_text(f"Category '{cat_name}' deleted.", "92"))
+
+
+
+
 
 if args.task:
     if args.category:

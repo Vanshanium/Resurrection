@@ -1,0 +1,6 @@
+{NVIDIA Corporation/NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2/4.6.0 NVIDIA 566.07}=SUPPORTED
+{AMD/AMD Radeon 660M (radeonsi, rembrandt, LLVM 20.1.8, DRM 3.64, 6.16.5-arch1-1)/4.6 (Core Profile) Mesa 25.2.2-arch1.2}=SUPPORTED
+{AMD/AMD Radeon 660M (radeonsi, rembrandt, LLVM 20.1.8, DRM 3.64, 6.16.7-arch1-1)/4.6 (Core Profile) Mesa 25.2.2-arch1.2}=SUPPORTED
+{AMD/AMD Radeon 660M (radeonsi, rembrandt, LLVM 20.1.8, DRM 3.64, 6.16.8-arch1-1)/4.6 (Core Profile) Mesa 25.2.3-arch1.2}=SUPPORTED
+{AMD/AMD Radeon 660M (radeonsi, rembrandt, LLVM 20.1.8, DRM 3.64, 6.16.8-arch3-1)/4.6 (Core Profile) Mesa 25.2.3-arch1.2}=SUPPORTED
+{AMD/AMD Radeon 660M (radeonsi, rembrandt, LLVM 20.1.8, DRM 3.64, 6.16.8-arch3-1)/4.6 (Core Profile) Mesa 25.2.4-arch1.1}=SUPPORTED
