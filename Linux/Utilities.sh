@@ -49,7 +49,8 @@ else
     Install kitty
     Install make
 
-
+    Install_snap code
+    Install_snap vivaldi
     Install_snap whatsapp-linux-desktop
     Install_snap figma-linux
 

@@ -77,7 +77,7 @@ fi
 
 #[.......Dot Configs and Dotfiles Setup.......]
 write_red "Setting up Dot Configs and Dotfiles..."
-mv ./Setup_files/Dotfiles/* ~/.config/
+cp ./Setup_files/Dotfiles/* ~/.config/
 
 
 
