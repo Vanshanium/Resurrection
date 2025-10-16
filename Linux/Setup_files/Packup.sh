@@ -38,3 +38,11 @@ cp -r ~/.local/bin/* ./Custom_Packages/
 write_green "Custom Packages Packed"
 sleep 1
 clear
+
+
+write_green "Copying the Zshrc and Pluggins"
+rm ./.zshrc
+cp ~/.zshrc ./
+write_green "Zshrc Packed"
+sleep 1
+clear

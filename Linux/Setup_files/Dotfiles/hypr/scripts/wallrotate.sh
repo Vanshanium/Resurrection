@@ -13,7 +13,7 @@ INDEX_FILE="$HOME/.cache/current_wallpaper_index"
 if [ -f "$INDEX_FILE" ]; then
     INDEX=$(cat "$INDEX_FILE")
 else
-    INDEX=0
+    INDEX=1
 fi
 
 # Compute next index
