@@ -1,5 +1,7 @@
 [Bookmarks]
 [Recent]
+/home/voob/Workspace/Mannraksha/EDA/
+/mnt/Coconuts/Projects_Interest/Mathematics/
 /mnt/Coconuts/SIH/Stick/
 /usr/share/blender/4.5/datafiles/studiolights/world/
 /home/voob/Desktop/SIH_Model/Blind_Stick/
@@ -8,5 +10,3 @@
 /home/voob/Desktop/SIH_Model/
 /mnt/Coconuts/SIH_Model/
 /mnt/Coconuts/SIH_Model/Renders/
-/mnt/Coconuts/SIH_Model/Textures/
-/mnt/Coconuts/Blender_files/Blender_Addons/

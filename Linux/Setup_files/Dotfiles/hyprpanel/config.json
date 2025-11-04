@@ -29,8 +29,8 @@
       "right": [
         "volume",
         "network",
-        "battery",
-        "blueman"
+        "bluetooth",
+        "battery"
       ]
     },
     "1": {
@@ -574,5 +574,7 @@
   "theme.bar.buttons.opacity": 85,
   "theme.bar.buttons.background_opacity": 50,
   "theme.bar.buttons.monochrome": false,
-  "theme.bar.buttons.battery.enableBorder": true
+  "theme.bar.buttons.battery.enableBorder": true,
+  "bar.bluetooth.label": true,
+  "theme.bar.buttons.bluetooth.enableBorder": false
 }

@@ -6,8 +6,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Downloading and setting oh my posh
 curl -s https://ohmyposh.dev/install.sh | bash -s 
-# mkdir ~/.poshthemes/                          # Make a Custom Theme!
-# mv ./Setup_files/creeper.json ~/.poshthemes/
+# mkdir ~/.poshthemes/
+mv ./Setup_files/creeper.json ~/.poshthemes/
 
 rm ~/.zshrc 
 cp ./Setup_files/.zshrc ~/

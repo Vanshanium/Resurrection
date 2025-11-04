@@ -32,8 +32,8 @@ sudo pacman -Q > Packages_Screenshot.txt
 sleep 1
 clear
 
-write_green "Packing up Local/Custom Packages"
 
+write_green "Packing up Local/Custom Packages"
 rm -r ./Custom_Packages/*
 
 mkdir ./Custom_Packages/bin/
@@ -47,9 +47,12 @@ sleep 1
 clear
 
 
-write_green "Copying the Zshrc and Pluggins"
+write_green "Copying the Zshrc and Pluggins and Oh My Posh"
 rm ./.zshrc
 cp ~/.zshrc ./
 write_green "Zshrc Packed"
+
+# Todo: Copy Oh My Zsh Pluggins
+cp -r ~/.poshthemes/* ./
 sleep 1
 clear

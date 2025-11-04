@@ -1,3 +1,5 @@
+/home/voob/Workspace/Mannraksha/EDA/Scatter.blend
+/mnt/Coconuts/Projects_Interest/Mathematics/cube_Identity.blend
 /mnt/Coconuts/SIH/Stick/ESP32_1.blend
 /mnt/Coconuts/SIH/Stick/Scene.blend
 /mnt/Coconuts/SIH/Stick/ESP32.blend
@@ -16,4 +18,3 @@
 /home/voob/Downloads/SIH.blend
 D:\Projects_Interest\3_Portfolio_Art_Design\Smith_Chart_Animation_1.blend
 D:\Projects_Interest\3_Portfolio_Art_Design\Smith_Chart.blend
-D:\Projects_Interest\3_Portfolio_Art_Design\Smith_Chart_001.blend
