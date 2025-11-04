@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Figma
+Comment=Unofficial desktop application for linux
+Exec=/home/voob/.local/bin/figma-linux
+Terminal=false
+Type=Application
+Icon=figma-linux
+StartupWMClass=figma-linux
+Categories=Graphics;
+MimeType=application/figma;x-scheme-handler/figma;

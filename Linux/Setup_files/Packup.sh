@@ -32,9 +32,16 @@ sudo pacman -Q > Packages_Screenshot.txt
 sleep 1
 clear
 
-write_green "Packing up Custom Packages"
+write_green "Packing up Local/Custom Packages"
+
 rm -r ./Custom_Packages/*
-cp -r ~/.local/bin/* ./Custom_Packages/
+
+mkdir ./Custom_Packages/bin/
+mkdir ./Custom_Packages/Desktop_Entries/
+
+cp -r ~/.local/bin/* ./Custom_Packages/bin/
+cp -r ~/.local/share/applications/* ./Custom_Packages/Desktop_Entries/
+
 write_green "Custom Packages Packed"
 sleep 1
 clear

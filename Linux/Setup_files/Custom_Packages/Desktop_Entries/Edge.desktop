@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Edge
+Exec=/home/voob/.local/bin/Edge %f
+Type=Application
+MimeType=application/pdf;
+NoDisplay=flase
+Categories=Network;WebBrowser;
+Icon=microsoft-edge

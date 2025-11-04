@@ -1,0 +1,788 @@
+.theme-dark {
+
+    --color-red: #bf616a;
+    --color-orange: #d08770;
+    --color-yellow-light: #ebcb8b;
+    --color-yellow-dark: #e4b860;
+    --color-green: #a3be8c;
+    --color-purple: #b48ead;
+    --color-sea-green: #8fbcbb;
+    --color-cyan: #88c0d0;
+    --color-frost: #81a1c1;
+    --color-blue: #5e81ac;
+    --color-salmon: #FC6E68;
+
+    --accent-light-hsl-h: 213;
+    --accent-light-hsl-s: 32%;
+    --accent-light-hsl-l: 53%;
+
+    --accent-dark-hsl-h: 210;
+    --accent-dark-hsl-s: 34%;
+    --accent-dark-hsl-l: 63%;
+
+    --color-red-rgb: 191, 97, 106;
+    --color-orange-rgb: 208, 135, 112;
+    --color-yellow-light-rgb: 235, 203, 139;
+    --color-yellow-dark-rgb: 228, 184, 96;
+    --color-green-rgb: 163, 190, 140;
+    --color-purple-rgb: 180, 142, 173;
+    --color-sea-green-rgb: 143, 188, 187;
+    --color-cyan-rgb: 136, 192, 208;
+    --color-frost-rgb: 129, 161, 193;
+    --color-blue-rgb: 94, 129, 172;
+    --color-salmon-rgb: 252, 110, 104;
+
+    --b0: #2E3440;
+    --b1: #3B4252;
+    --b2: #434C5E;
+    --b3: #4C566A;
+
+    --w0: #D8DEE9;
+    --w1: #E5E9F0;
+    --w2: #ECEFF4;
+    --w3: #f5f7f9;
+
+    --w0-rgb: 216, 222, 233;
+    --b3-rgb: 76, 86, 106;
+
+    --text-error: var(--color-salmon);
+    --text-accent: var(--color-accent);
+    --text-highlight-bg: rgba(180, 142, 173, 0.4);
+    --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
+
+    --bold-weight: var(--font-bold);
+}
+
+.theme-dark {
+
+    --color-yellow: var(--color-yellow-light);
+    --color-yellow-rgb: var(--color-yellow-light-rgb);
+
+    --accent-h: var(--accent-dark-hsl-h);
+    --accent-s: var(--accent-dark-hsl-s);
+    --accent-l: var(--accent-dark-hsl-l);
+
+    /* the note background */
+    --background-primary: var(--b1);
+    /* used for code blocks */
+    --background-primary-alt: var(--b0);
+    /* outside ui background */
+    /* background titlebar unfocused */
+    --background-secondary: var(--b0);
+    /* titlebar focused */
+    --background-secondary-alt: var(--b0);
+    /* lines between objects */
+    /* slider background */
+    --background-modifier-border: var(--b3);
+
+    --color-base-00: var(--b0);
+    --color-base-10: var(--b0);
+    --color-base-20: var(--b0);
+    --color-base-25: var(--b0);
+    /* lines in the ui */
+    --color-base-30: var(--b1);
+    /* toggle backgroundse */
+    /* small line in tabs */
+    --color-base-35: var(--b3);
+    /* window outlines */
+    --color-base-40: var(--b0);
+    /* bullets */
+    --color-base-50: var(--w0);
+    --color-base-60: var(--w1);
+    --color-base-70: var(--w2);
+    /* main font */
+    --color-base-100: var(--w3);
+}
+
+/*
+ * Main
+*/
+body {
+    --font-ui-smaller: 12px;
+    --font-ui-small: 14px;
+    --font-ui-medium: 16px;
+    --font-ui-large: 18px;
+    --header-height: 30px;
+    --file-folding-offset: 10px;
+    /* 1.1 fixes */
+    --checkbox-size: 1.1em;
+    --list-bullet-size: .5em;
+    /* Fix font sizes in 1.3.7 */
+    --h1-size: 2em;
+    --h2-size: 1.6em;
+    --h3-size: 1.37em;
+    --h4-size: 1.25em;
+    --h5-size: 1.12em;
+    --h6-size: 1.12em;
+    /*this is spacing before a header, it is stupid*/
+    --heading-spacing: 0;
+    --p-spacing: .5rem;
+}
+
+/* this brings back header spacing in reading mode */
+/* default is 2.5 p-spacing and p-spacing default is 1rem */
+.markdown-rendered {
+    --heading-spacing: calc(var(--p-spacing)*2);
+}
+
+/* changed in 1.4*/
+hr {
+    margin: 1.5em;
+}
+
+/* change margins, default is 32 */
+body {
+    & {
+        --file-margins: 20px;
+    }
+
+    & .mod-stacked {
+        --file-margins: 10px;
+    }
+
+    & .mod-stacked:has(.cm-gutter) {
+        --file-margins: 2px
+    }
+}
+
+/* 
+
+/*Folders
+/* This is Important! */
+/* https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066 */
+
+.tree-item-children {
+    --nav-indentation-guide-width: 4px;
+    border-bottom-left-radius: 8px;
+}
+
+
+/* Make it Work! */
+.pln-folder-icons {
+
+    /* optionally make the collapse icons folders instead */
+    & .nav-files-container .collapse-icon.is-collapsed svg.svg-icon {
+        transform: none;
+    }
+
+    /* Make all folder chevrons into icons, and make them all white */
+    & .nav-files-container>div>.nav-folder .collapse-icon svg {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+        /* color: var(--icon-color); */
+        background-color: red !important;
+    }
+
+    /* Change top level to grey */
+
+    & .nav-files-container>div>.nav-folder>.nav-folder-title>.collapse-icon svg {
+        color: var(--b0);
+        background-color: var(--b0);
+    }
+
+    /* Make all folder chevrons into icons, and make them all white */
+    & .nav-files-container>div>.nav-folder .collapse-icon.is-collapsed svg {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+        color: var(--icon-color);
+        background-color: var(--icon-color);
+    }
+
+    /* Change top level to grey */
+    & .nav-files-container>div>.nav-folder>.nav-folder-title>.collapse-icon.is-collapsed svg {
+        color: var(--b0);
+        background-color: var(--b0);
+    }
+
+}
+
+.nav-files-container {
+
+    /* changes the top level folders to darker text so they can be read on the coloured folder background*/
+    &>div>.nav-folder>.nav-folder-title,
+    &>div>.nav-folder>.nav-folder-title:hover,
+    &>div>.nav-folder>.nav-folder-title>.collapse-icon svg.svg-icon {
+        --nav-item-color: var(--b0);
+        --nav-item-color-hover: var(--b0);
+        --nav-collapse-icon-color: var(--b0);
+    }
+
+    /* Make items focused via arrow keys highlighted */
+    & .tree-item-self.has-focus {
+        background-color: var(--background-modifier-hover);
+    }
+
+    /* Coloursssssss */
+    &>div>.nav-folder:nth-child(9n+2)>.tree-item-self {
+        background-color: var(--color-red);
+    }
+
+    &>div>.nav-folder:nth-child(9n+2) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-red);
+    }
+
+    &>div>.nav-folder:nth-child(9n+3)>.tree-item-self {
+        background-color: var(--color-orange);
+    }
+
+    &>div>.nav-folder:nth-child(9n+3) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-orange);
+    }
+
+    &>div>.nav-folder:nth-child(9n+4)>.tree-item-self {
+        background-color: var(--color-yellow-light);
+    }
+
+    &>div>.nav-folder:nth-child(9n+4) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-yellow-light);
+    }
+
+    &>div>.nav-folder:nth-child(9n+5)>.tree-item-self {
+        background-color: var(--color-green);
+    }
+
+    &>div>.nav-folder:nth-child(9n+5) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-green);
+    }
+
+    &>div>.nav-folder:nth-child(9n+6)>.tree-item-self {
+        background-color: var(--color-sea-green);
+    }
+
+    &>div>.nav-folder:nth-child(9n+6) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-sea-green);
+    }
+
+    &>div>.nav-folder:nth-child(9n+7)>.tree-item-self {
+        background-color: var(--color-cyan);
+    }
+
+    &>div>.nav-folder:nth-child(9n+7) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-cyan);
+    }
+
+    &>div>.nav-folder:nth-child(9n+8)>.tree-item-self {
+        background-color: var(--color-frost);
+    }
+
+    &>div>.nav-folder:nth-child(9n+8) .tree-item-children {
+        border-left: 3px solid var(--color-frost);
+    }
+
+    &>div>.nav-folder:nth-child(9n+9)>.tree-item-self {
+        background-color: var(--color-blue);
+    }
+
+    &>div>.nav-folder:nth-child(9n+9) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-blue);
+    }
+
+    &>div>.nav-folder:nth-child(9n+10)>.tree-item-self {
+        background-color: var(--color-purple);
+    }
+
+    &>div>.nav-folder:nth-child(9n+10) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-purple);
+    }
+}
+
+/* lock functionality */
+.lock {
+    & * {
+        -webkit-user-modify: read-only !important;
+    }
+
+    & .metadata-content {
+        pointer-events: none;
+    }
+}
+
+.workspace-leaf:has(.lock) .clickable-icon.view-action[aria-label^="Current view:"] {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lock'%3E%3Crect width='18' height='11' x='3' y='11' rx='2' ry='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");
+    background-color: var(--icon-color);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    pointer-events: none
+}
+
+/* This is start of the Another theme. */
+
+:root {
+    --dark0_x: 46, 52, 64;
+    /* #2e3440 */
+    --dark0: rgb(var(--dark0_x));
+    --dark1_x: 59, 66, 82;
+    /* #3b4252 */
+    --dark1: rgb(var(--dark1_x));
+    --dark2_x: 67, 76, 94;
+    /* #434c5e */
+    --dark2: rgb(var(--dark2_x));
+    --dark3_x: 76, 86, 106;
+    /* #4c566a */
+    --dark3: rgb(var(--dark3_x));
+
+    --light0_x: 216, 222, 233;
+    /* #d8dee9 */
+    --light0: rgb(var(--light0_x));
+    --light1_x: 229, 233, 240;
+    /* #e5e9f0 */
+    --light1: rgb(var(--light1_x));
+    --light2_x: 236, 239, 244;
+    /* #eceff4 */
+    --light2: rgb(var(--light2_x));
+    --light3_x: 255, 255, 255;
+    /* #ffffff */
+    --light3: rgb(var(--light3_x));
+
+    --frost0_x: 143, 188, 187;
+    /* #8fbcbb */
+    --frost0: rgb(var(--frost0_x));
+    --frost1_x: 136, 192, 208;
+    /* #88c0d0 */
+    --frost1: rgb(var(--frost1_x));
+    --frost2_x: 129, 161, 193;
+    /* #81a1c1 */
+    --frost2: rgb(var(--frost2_x));
+    --frost3_x: 94, 129, 172;
+    /* #5e81ac */
+    --frost3: rgb(var(--frost3_x));
+
+    --red_x: 191, 97, 106;
+    /* #bf616a */
+    --red: rgb(var(--red_x));
+    --orange_x: 208, 135, 112;
+    /* #d08770 */
+    --orange: rgb(var(--orange_x));
+    --yellow_x: 235, 203, 139;
+    /* #ebcb8b */
+    --yellow: rgb(var(--yellow_x));
+    --green_x: 163, 190, 140;
+    /* #a3be8c */
+    --green: rgb(var(--green_x));
+    --purple_x: 180, 142, 173;
+    /* #b48ead */
+    --purple: rgb(var(--purple_x));
+}
+
+body {
+    --accent-h: 354;
+    /* --red #bf616a */
+    --accent-s: 42%;
+    --accent-l: 56%;
+
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
+
+    --tag-decoration: none;
+    --tag-decoration-hover: underline;
+    --tag-padding-x: .5em;
+    --tag-padding-y: .2em;
+    --tag-radius: .5em;
+
+    --tab-font-weight: 600;
+    --bold-weight: 600;
+
+    --checkbox-radius: 0;
+
+    /* --list-indent:                    2em; */
+
+    --embed-border-left: 6px double var(--interactive-accent);
+}
+
+/* This is other theme in it make it less */
+
+.theme-dark {
+    --color-red-rgb: var(--red_x);
+    --color-red: var(--red);
+    --color-purple-rgb: var(--purple_x);
+    --color-purple: var(--purple);
+    --color-green-rgb: var(--green_x);
+    --color-green: var(--green);
+    --color-cyan-rgb: var(--frost1_x);
+    --color-cyan: var(--frost1);
+    --color-blue-rgb: var(--frost3_x);
+    --color-blue: var(--frost3);
+    --color-yellow-rgb: var(--yellow_x);
+    --color-yellow: var(--yellow);
+    --color-orange-rgb: var(--orange_x);
+    --color-orange: var(--orange);
+    /* --color-pink:                    var(--purple); */
+
+    --background-primary: var(--dark0);
+    --background-primary-alt: var(--dark0);
+    --background-secondary: var(--dark1);
+    --background-secondary-alt: var(--dark2);
+    --background-modifier-border: var(--dark2);
+
+    --cursor-line-background: rgba(var(--red_x), 0.2);
+
+    --text-normal: var(--light2);
+    --text-faint: var(--light0);
+    --text-muted: var(--light1);
+
+    --link-url: var(--purple);
+
+    --h1-color: var(--red);
+    --h2-color: var(--yellow);
+    --h3-color: var(--green);
+    --h4-color: var(--purple);
+    --h5-color: var(--frost0);
+    --h6-color: var(--frost2);
+
+    --text-highlight-bg: var(--frost1);
+    --text-highlight-fg: var(--dark0);
+
+    --text-accent: var(--orange);
+    --text-accent-hover: var(--frost2);
+
+    --tag-color: var(--frost0);
+    --tag-background: var(--dark2);
+    --tag-background-hover: var(--dark1);
+
+    --titlebar-text-color-focused: var(--red);
+
+    --inline-title-color: var(--yellow);
+
+    --bold-color: var(--yellow);
+    --italic-color: var(--yellow);
+
+    --checkbox-color: var(--frost0);
+    --checkbox-color-hover: var(--frost0);
+    --checkbox-border-color: var(--frost0);
+    --checkbox-border-color-hover: var(--frost0);
+    --checklist-done-color: rgba(var(--light2_x), 0.5);
+
+    --table-header-background: hsl(220, 16%, 16%);
+    --table-header-background-hover: var(--dark3);
+    --table-row-even-background: hsl(220, 16%, 20%);
+    --table-row-odd-background: hsl(220, 16%, 24%);
+    --table-row-background-hover: var(--dark3);
+
+    --text-selection: rgba(var(--red_x), 0.6);
+    --flashing-background: rgba(var(--red_x), 0.3);
+
+    --code-normal: var(--frost1);
+    --code-background: var(--dark1);
+
+    --mermaid-note: var(--frost3);
+    --mermaid-loopline: var(--frost1);
+    --mermaid-exclude: var(--dark3);
+    --mermaid-seqnum: var(--dark0);
+
+    --icon-color-hover: var(--red);
+    --icon-color-focused: var(--frost2);
+
+    --nav-item-color-hover: var(--red);
+    --nav-item-color-active: var(--frost2);
+    --nav-file-tag: rgba(var(--yellow_x), 0.9);
+
+    --graph-line: var(--dark3);
+    --graph-node: var(--light3);
+    --graph-node-tag: var(--red);
+    --graph-node-attachment: var(--green);
+
+    --calendar-hover: var(--red);
+    --calendar-background-hover: var(--dark3);
+    --calendar-week: var(--yellow);
+    --calendar-today: var(--yellow);
+
+    --dataview-key: var(--text-faint);
+    --dataview-key-background: rgba(var(--frost2_x), 0.3);
+    --dataview-value: var(--text-faint);
+    --dataview-value-background: rgba(var(--red_x), 0.3);
+
+    --tab-text-color-focused-active: var(--frost2);
+    --tab-text-color-focused-active-current: var(--red);
+}
+
+.theme-light {
+    --color-red-rgb: var(--red_x);
+    --color-red: var(--red);
+    --color-purple-rgb: var(--purple_x);
+    --color-purple: var(--purple);
+    --color-green-rgb: var(--green_x);
+    --color-green: var(--green);
+    --color-cyan-rgb: var(--frost1_x);
+    --color-cyan: var(--frost1);
+    --color-blue-rgb: var(--frost3_x);
+    --color-blue: var(--frost3);
+    --color-yellow-rgb: var(--yellow_x);
+    --color-yellow: var(--yellow);
+    --color-orange-rgb: var(--orange_x);
+    --color-orange: var(--orange);
+    /* --color-pink:                    var(--purple); */
+
+    --background-primary: var(--light3);
+    --background-primary-alt: var(--light3);
+    --background-secondary: var(--light2);
+    --background-secondary-alt: var(--light1);
+    --background-modifier-border: var(--light1);
+
+    --cursor-line-background: rgba(var(--red_x), 0.1);
+
+    --text-normal: var(--dark2);
+    --text-faint: var(--dark0);
+    --text-muted: var(--dark1);
+
+    --link-url: var(--purple);
+
+    --h1-color: var(--red);
+    --h2-color: var(--yellow);
+    --h3-color: var(--green);
+    --h4-color: var(--purple);
+    --h5-color: var(--frost0);
+    --h6-color: var(--frost2);
+
+    --text-highlight-bg: var(--yellow);
+    --text-highlight-fg: var(--dark0);
+
+    --text-accent: var(--orange);
+    --text-accent-hover: var(--frost2);
+
+    --tag-color: var(--dark3);
+    --tag-background: var(--light1);
+    --tag-background-hover: var(--light0);
+
+    --titlebar-text-color-focused: var(--red);
+
+    --inline-title-color: var(--yellow);
+
+    --bold-color: var(--green);
+    --italic-color: var(--green);
+
+    --checkbox-color: var(--frost2);
+    --checkbox-color-hover: var(--frost2);
+    --checkbox-border-color: var(--frost2);
+    --checkbox-border-color-hover: var(--frost2);
+    --checklist-done-color: rgba(var(--dark2_x), 0.4);
+
+    --table-header-background: rgba(var(--light2_x), 0.2);
+    --table-header-background-hover: var(--frost2);
+    --table-row-even-background: rgba(var(--light2_x), 0.4);
+    --table-row-odd-background: rgba(var(--light2_x), 0.8);
+    --table-row-background-hover: var(--frost2);
+
+    --text-selection: rgba(var(--red_x), 0.6);
+    --flashing-background: rgba(var(--red_x), 0.3);
+
+    --code-normal: var(--frost1);
+    --code-background: var(--light2);
+
+    --mermaid-note: var(--frost0);
+    --mermaid-loopline: var(--frost1);
+    --mermaid-exclude: var(--light0);
+    --mermaid-seqnum: var(--light0);
+
+    --icon-color-hover: var(--red);
+    --icon-color-focused: var(--frost3);
+
+    --nav-item-color-hover: var(--red);
+    --nav-item-color-active: var(--frost2);
+    --nav-file-tag: rgba(var(--orange_x), 0.9);
+
+    --graph-line: var(--light0);
+    --graph-node: var(--dark3);
+    --graph-node-tag: var(--red);
+    --graph-node-attachment: var(--green);
+
+    --calendar-hover: var(--red);
+    --calendar-background-hover: var(--light0);
+    --calendar-week: var(--orange);
+    --calendar-today: var(--orange);
+
+    --dataview-key: var(--text-faint);
+    --dataview-key-background: rgba(var(--frost2_x), 0.3);
+    --dataview-value: var(--text-faint);
+    --dataview-value-background: rgba(var(--red_x), 0.3);
+
+    --tab-text-color-focused-active: var(--frost2);
+    --tab-text-color-focused-active-current: var(--red);
+}
+
+table {
+    border: 1px solid var(--background-secondary) !important;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 2px solid var(--background-modifier-border) !important;
+}
+
+th {
+    font-weight: 600 !important;
+    border: 1px solid var(--background-secondary) !important;
+}
+
+td {
+    border-left: 1px solid var(--background-secondary) !important;
+    border-right: 1px solid var(--background-secondary) !important;
+    border-bottom: 1px solid var(--background-secondary) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(odd) {
+    background-color: var(--table-row-odd-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even):hover,
+.markdown-rendered tbody tr:nth-child(odd):hover {
+    background-color: var(--table-row-background-hover) !important;
+}
+
+.markdown-rendered mark {
+    background-color: var(--text-highlight-bg);
+    color: var(--text-highlight-fg);
+}
+
+.markdown-rendered mark a {
+    color: var(--red) !important;
+    font-weight: 600;
+}
+
+.search-result-file-matched-text {
+    color: var(--text-highlight-fg) !important;
+}
+
+.cm-hashtag-begin:hover,
+.cm-hashtag-end:hover {
+    color: var(--text-accent);
+    /* background-color: var(--tag-background-hover); */
+    text-decoration: underline;
+}
+
+input[type=checkbox] {
+    border: 1px solid var(--checkbox-color);
+}
+
+input[type=checkbox]:checked {
+    background-color: var(--checkbox-color);
+    box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+input[type=checkbox]:checked:after {
+    display: none;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    line-height: var(--line-height-tight) !important;
+}
+
+.cm-url {
+    color: var(--link-url) !important;
+}
+
+.cm-url:hover {
+    color: var(--text-accent-hover) !important;
+}
+
+/* Keep highlight/marks the same between viewer and editor. */
+.cm-highlight {
+    color: var(--text-highlight-fg) !important;
+}
+
+/* Keep inline code the same between viewer and editor. */
+.cm-inline-code {
+    border-radius: var(--radius-s);
+    font-size: var(--code-size);
+    padding: 0.1em 0.25em;
+}
+
+.cm-formatting-code+.cm-inline-code {
+    border-radius: 0;
+    padding: 0.1em 0;
+}
+
+.cm-formatting-code {
+    border-radius: var(--radius-s) 0 0 var(--radius-s);
+    padding: 0.1em 0 0.1em 0.25em;
+}
+
+.cm-inline-code+.cm-formatting-code {
+    border-radius: 0 var(--radius-s) var(--radius-s) 0;
+    padding: 0.1em 0.25em 0.1em 0;
+}
+
+.cm-line .cm-strong {
+    color: var(--bold-color) !important;
+}
+
+.mermaid .note {
+    fill: var(--mermaid-note) !important;
+}
+
+.mermaid .loopLine {
+    stroke: var(--mermaid-loopline) !important;
+}
+
+.mermaid .loopText>tspan,
+.mermaid .entityLabel {
+    fill: var(--red) !important;
+}
+
+.mermaid .exclude-range {
+    fill: var(--mermaid-exclude) !important;
+}
+
+.mermaid .sequenceNumber {
+    fill: var(--mermaid-seqnum) !important;
+}
+
+.calendar .week-num {
+    color: var(--calendar-week) !important;
+}
+
+.calendar .today {
+    color: var(--calendar-today) !important;
+}
+
+.calendar .week-num:hover,
+.calendar .day:hover {
+    color: var(--calendar-hover) !important;
+    background-color: var(--calendar-background-hover) !important;
+}
+
+.markdown-embed-title {
+    color: var(--yellow);
+    font-weight: 600 !important;
+}
+
+.cm-active {
+    background-color: var(--cursor-line-background) !important;
+}
+
+.nav-file-tag {
+    color: var(--nav-file-tag) !important;
+}
+
+.is-flashing {
+    background-color: var(--flashing-background) !important;
+}
+
+.dataview.inline-field-key {
+    border-top-left-radius: var(--radius-s);
+    border-bottom-left-radius: var(--radius-s);
+    padding-left: 4px;
+    font-family: var(--font-monospace);
+    font-size: var(--font-smaller);
+    color: var(--dataview-key) !important;
+    background-color: var(--dataview-key-background) !important;
+}
+
+.dataview.inline-field-value {
+    border-top-right-radius: var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
+    padding-right: 4px;
+    font-family: var(--font-monospace);
+    font-size: var(--font-smaller);
+    color: var(--dataview-value) !important;
+    background-color: var(--dataview-value-background) !important;
+}
+
+.suggestion-highlight {
+    color: var(--red);
+}

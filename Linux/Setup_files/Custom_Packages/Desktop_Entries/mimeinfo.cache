@@ -1,0 +1,5 @@
+[MIME Cache]
+application/figma=figma-linux.desktop;
+application/pdf=Edge.desktop;
+image/png=imv-2.desktop;imv-3.desktop;
+x-scheme-handler/figma=figma-linux.desktop;
