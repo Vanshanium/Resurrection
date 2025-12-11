@@ -75,9 +75,3 @@ else
 fi
 
 
-#[.......Dot Configs and Dotfiles Setup.......]
-write_red "Setting up Dot Configs and Dotfiles..."
-cp ./Setup_files/Dotfiles/* ~/.config/
-
-
-

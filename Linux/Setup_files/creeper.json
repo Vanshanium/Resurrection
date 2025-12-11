@@ -3,20 +3,21 @@
   // These are the colors in the theme
   "palette": {
     "white": "#FFFFFF",
-    "tan": "#CC3802",
-    "teal": "#047E84",
-    "plum": "#9A348E",
+    "tan": "#c0376b",
+    "teal": "#046f84",
+    "plum": "#34699a",
     "blush": "#DA627D",
     "salmon": "#FCA17D",
     "sky": "#86BBD8",
-    "teal_blue": "#33658A"
+    "teal_blue": "#33658A",
+    "african_american": "#282b2d"
   },
   "blocks": [
     // Left aligned segments
     {
       "alignment": "left",
       "segments": [
-        // Creeper face
+        // Arrow segment
         {
           "background": "p:plum",
           "foreground": "p:white",
@@ -72,7 +73,7 @@
         // Execution time segment
         {
           "background": "p:sky",
-          "foreground": "p:white",
+          "foreground": "p:african_american",
           "properties": {
             "style": "roundrock",
             "threshold": 0
@@ -175,7 +176,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:teal",
+          "foreground": "p:plum",
           "style": "plain",
           "template": "\u2570\u2500",
           "type": "text"
