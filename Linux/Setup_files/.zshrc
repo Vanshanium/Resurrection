@@ -23,9 +23,10 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^H' backward-kill-word  # ctrl+backspace to delete word
 
 #...............................Aliases.........................#
-alias clip="xclip -selection clipboard"
 alias sleep="shutdown now"
 alias open="nautilus"
+alias vim="nvim" 
+
 
 #...............................PATH.........................#
 export PATH=$PATH:$HOME/.local/bin

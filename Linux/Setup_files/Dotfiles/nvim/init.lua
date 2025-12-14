@@ -9,9 +9,9 @@ vim.opt.shiftwidth = 2     -- Indents use 2 spaces
 vim.opt.expandtab = true   -- Convert tabs to spaces
 vim.opt.softtabstop = 2    -- Insert 2 spaces when pressing Tab
 
-
 -- This is the for the transparent background --
 -- vim.opt.termguicolors = true
+
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 

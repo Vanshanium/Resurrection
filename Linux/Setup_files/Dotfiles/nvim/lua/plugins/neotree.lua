@@ -20,6 +20,11 @@ return {
             enabled = true,
           },
           hijack_netrw_behavior = "open_default",
+          -- filtered_items = {
+          --   visible = false,        -- This Enables the Hidden View.
+          --   hide_dotfiles = false,
+          --   hide_gitignored = false,
+          -- }, 
         },
       })
 
