@@ -25,9 +25,8 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-
-  -- You can remove this later
-  install = { colorscheme = { "habamax" } },
-
+  ui = {
+    border = "rounded",
+  },
   checker = { enabled = true },
 })
