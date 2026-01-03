@@ -35,7 +35,7 @@ run('git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"')
 
 # 7. Git identity
 run('git config --global user.name "Vanshanium"')
-run('git config --global user.email "your_email@example.com"')
+run('git config --global user.email "vansh.singh8272@gmail.com"')
 
 
 # 9. Show public key
