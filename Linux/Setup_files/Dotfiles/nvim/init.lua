@@ -1,6 +1,10 @@
 require("config.lazy")
+require("config.keymap")
 
--- General Configs -- 
+
+---- General Configs ---- 
+
+vim.opt.clipboard = "unnamedplus" -- This sets the Clipboard as the global. 
 vim.opt.background = "dark"
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -10,11 +14,8 @@ vim.opt.expandtab = true   -- Convert tabs to spaces
 vim.opt.softtabstop = 2    -- Insert 2 spaces when pressing Tab
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", opts)
-vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<cr>", opts)
-vim.keymap.set("v", "<C-s>", "<Esc><cmd>w<cr>", opts)
 
--- Background Configurations --
+---- Background Configurations ----
 
 -- vim.opt.termguicolors = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

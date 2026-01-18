@@ -5,11 +5,31 @@ return {
     "numToStr/Comment.nvim",
     config = function()
       require("Comment").setup()
-      -- Toggle comment with Ctrl+/
-      vim.keymap.set("n", "<C-_>", "gcc", { remap = true })  -- normal mode
-      vim.keymap.set("v", "<C-_>", "gc", { remap = true })   -- visual mode
+
+      -- Normal mode
+      vim.keymap.set(
+        "n",
+        "<C-_>",
+        "<Plug>(comment_toggle_linewise_current)",
+        { silent = true }
+      )
+
+      -- Visual mode
+      vim.keymap.set(
+        "v",
+        "<C-_>",
+        "<Plug>(comment_toggle_linewise_visual)",
+        { silent = true }
+      )
+
+      -- Insert mode
+      vim.keymap.set(
+        "i",
+        "<C-_>",
+        "<Esc><Plug>(comment_toggle_linewise_current)i",
+        { silent = true }
+      )
     end,
   },
 }
-
 
