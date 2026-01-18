@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
 # List your wallpapers
-WALLPAPERS=(
-    "$HOME/Pictures/wallpapers/nebula.jpg"
-    "$HOME/Pictures/wallpapers/nebula_2.jpg"
-    "$HOME/Pictures/wallpapers/nebula_3.jpg"
-)
+WALLPAPERS=("$HOME/Library/Pictures/Wallpapers/"*)
 
 # Remember which wallpaper was last used
 INDEX_FILE="$HOME/.cache/current_wallpaper_index"
