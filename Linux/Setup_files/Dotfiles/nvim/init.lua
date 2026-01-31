@@ -2,7 +2,9 @@ require("config.lazy")
 require("config.keymap")
 
 
----- General Configs ---- 
+--- General Configs ---- 
+
+local opts = { noremap = true, silent = true }
 
 vim.opt.clipboard = "unnamedplus" -- This sets the Clipboard as the global. 
 vim.opt.background = "dark"
@@ -12,8 +14,6 @@ vim.opt.tabstop = 2        -- TAB = 2 spaces when showing tabs
 vim.opt.shiftwidth = 2     -- Indents use 2 spaces
 vim.opt.expandtab = true   -- Convert tabs to spaces
 vim.opt.softtabstop = 2    -- Insert 2 spaces when pressing Tab
-
-local opts = { noremap = true, silent = true }
 
 ---- Background Configurations ----
 

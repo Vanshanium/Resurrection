@@ -9,4 +9,4 @@ grim -g "$(slurp)" $IMAGE_FILE
 sleep 1
 LANGUAGE=${1:-eng}  # Default to English
 
-tesseract "$IMAGE_FILE" stdout -l "$LANGUAGE" | xclip -selection clipboard
+tesseract "$IMAGE_FILE" stdout -l "$LANGUAGE" | clipcopy

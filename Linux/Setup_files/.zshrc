@@ -2,6 +2,10 @@
 export LANG=en_US.UTF-8
 export ZSH="$HOME/.oh-my-zsh"
 
+export EDITOR="nvim" # This sets the Nvim as sudo
+export VISUAL="nvim"
+
+
 #...............................SSH Agent for the Github.........................#
 eval "$(ssh-agent -s)"
 ssh-add -l | grep -q "Github" || ssh-add ~/.ssh/Github
@@ -25,7 +29,7 @@ bindkey '^H' backward-kill-word  # ctrl+backspace to delete word
 #...............................Aliases.........................#
 alias sleep="shutdown now"
 alias open="nautilus"
-alias vim="nvim" 
+alias vim="nvim ./" 
 
 
 #...............................PATH.........................#

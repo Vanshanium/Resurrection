@@ -26,7 +26,7 @@ return {
       vim.keymap.set(
         "i",
         "<C-_>",
-        "<Esc><Plug>(comment_toggle_linewise_current)i",
+        "<Esc><Plug>(comment_toggle_linewise_current)A",
         { silent = true }
       )
     end,
