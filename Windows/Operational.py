@@ -24,6 +24,19 @@ os.system(command)
 
 print("Setups Downloaded")
 
+# Remove Web Experience Folder
+# Run 
+# winget uninstall "Microsoft Edge Web Experience" -s
+
+# TODO : Make logics for Installation of PowerToys
+# extract ./Win/PowerToys.rar
+
+
+# TODO : Make logics for Activation of WinRar 
+# Get rarreg.key.txt from the folder and move it to C:\Program Files\WinRAR
+# os.system("move rarreg.key.txt C:\Program Files\WinRAR")
+
+
 # TODO Make logics for Installation of MS OFFICE 
 # extract ./Win/office.rar
 # os.command(./Win/office/setup.exe \configure ./configuration.xml)  this will install the OFFICE

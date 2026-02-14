@@ -3,6 +3,10 @@ local opts = { noremap = true, silent = true }
 
 
 -------------------- EDITING --------------------
+-- Finder --
+vim.keymap.set("n", "<C-f>", function()
+  require("telescope.builtin").current_buffer_fuzzy_find()
+end)
 
 -- Deletion and all --
 vim.api.nvim_set_keymap('n', '<BS>', '"_X', { noremap = true, silent = true, desc = "Normal mode: Backspace deletes character without overwriting register" })
@@ -27,6 +31,10 @@ map("i", "<C-v>", "<Esc>pa", vim.tbl_extend("force", opts, { desc = "Insert mode
 vim.keymap.set("n", "<C-x>", "dd", vim.tbl_extend("force", opts, { desc = "Normal mode: Cut line" }))
 vim.keymap.set("v", "<C-x>", "d", vim.tbl_extend("force", opts, { desc = "Visual mode: Cut selection" }))
 vim.keymap.set("i", "<C-x>", "<Esc>ddi", vim.tbl_extend("force", opts, { desc = "Insert mode: Cut line" }))
+
+-- Visual mode indenting
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
+vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
 
 
 -------------------- MODES --------------------
@@ -76,4 +84,10 @@ vim.keymap.set("n", "b", "G", { noremap = true, silent = true, desc = "Move to b
 vim.keymap.set("v", "t", "gg", { noremap = true, silent = true, desc = "Move to top of file" })
 vim.keymap.set("v", "b", "G", { noremap = true, silent = true, desc = "Move to bottom of file" })
 
+-- NORMAL mode: move current line
+vim.keymap.set("n", "<A-w>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("n", "<A-s>", ":m .+1<CR>==", { desc = "Move line down" })
 
+-- VISUAL mode: move selected lines
+vim.keymap.set("v", "<A-w>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+vim.keymap.set("v", "<A-s>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })

@@ -24,7 +24,9 @@ eval "$(oh-my-posh init zsh --config ~/.poshthemes/creeper.json)"
 source $ZSH/oh-my-zsh.sh
 
 #...............................Key Bindings.........................#
+
 bindkey '^H' backward-kill-word  # ctrl+backspace to delete word
+bindkey '^ ' autosuggest-accept
 
 #...............................Aliases.........................#
 alias sleep="shutdown now"
