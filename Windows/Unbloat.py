@@ -9,4 +9,7 @@ elevate.elevate()
 
 os.system("iwr -useb https://christitus.com/win | iex")
 
+# Remove Web Experience Folder
+# Run 
+os.system("winget uninstall \"Microsoft Edge Web Experience\" -s")
 

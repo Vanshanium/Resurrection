@@ -24,10 +24,6 @@ os.system(command)
 
 print("Setups Downloaded")
 
-# Remove Web Experience Folder
-# Run 
-# winget uninstall "Microsoft Edge Web Experience" -s
-
 # TODO : Make logics for Installation of PowerToys
 # extract ./Win/PowerToys.rar
 
