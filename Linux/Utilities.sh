@@ -2,7 +2,10 @@ source ./Variables.sh
 
 # Module to install utilities
 if [[ $OS_NAME =~ Arch ]]; then
-
+    
+    # System utilities:
+    Install power-profiles-daemon
+    
     Install zsh
     Install htop
     Install sl
@@ -26,7 +29,11 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install_yay visual-studio-code-bin
     Install_yay microsoft-edge-stable-bin
     Install_yay figma-linux-bin
-    Install_yay hyprpanel
+    
+    # The Quickshell
+    Install_yay quickshell-git
+    Install_yay ttf-material-symbols-variable # For the Calestia Shell 
+    Install_yay libcava
 
     Install nvidia 
     Install nvidia-utils

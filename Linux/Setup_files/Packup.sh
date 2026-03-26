@@ -6,7 +6,8 @@ write_green "Updating the Dotfiles from the Current Dotfiles"
 
 rm -r ./Dotfiles/* 
 
-packages=(gtk-3.0 gtk-4.0 blender hypr rofi fastfetch kitty waybar nautilus hyprpanel nvim)
+packages=(gtk-3.0 gtk-4.0 blender hypr rofi fastfetch kitty quickshell nautilus hyprpanel nvim caelestia)
+
 
 # Example usage:
 for package in "${packages[@]}"; do

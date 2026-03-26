@@ -35,7 +35,8 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) -- Refrences of any variable of a function 
         vim.keymap.set("n", "<C-q>", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<C-r>", vim.lsp.buf.rename, opts)
-        vim.keymap.set("n", "<C-f>", vim.lsp.buf.code_action, opts)
+        vim.keymap.set("n", "<C-t>", vim.lsp.buf.code_action, opts)
+        
       end
 
       -- Python

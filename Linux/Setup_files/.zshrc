@@ -31,7 +31,7 @@ bindkey '^ ' autosuggest-accept
 #...............................Aliases.........................#
 alias sleep="shutdown now"
 alias open="nautilus"
-alias vim="nvim ./" 
+alias vim="nvim" 
 
 
 #...............................PATH.........................#
@@ -46,6 +46,7 @@ compinit
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
 
 #...............................Clear Terminal On Load.........................#
 clear

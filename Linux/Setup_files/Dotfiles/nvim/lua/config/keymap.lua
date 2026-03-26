@@ -2,11 +2,12 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 
--------------------- EDITING --------------------
+------------------- EDITING --------------------
 -- Finder --
+
 vim.keymap.set("n", "<C-f>", function()
   require("telescope.builtin").current_buffer_fuzzy_find()
-end)
+end, { silent = true })
 
 -- Deletion and all --
 vim.api.nvim_set_keymap('n', '<BS>', '"_X', { noremap = true, silent = true, desc = "Normal mode: Backspace deletes character without overwriting register" })
@@ -27,11 +28,11 @@ map({ "n", "v" }, "<C-c>", "y", vim.tbl_extend("force", opts, { desc = "Copy to 
 map({ "n", "v" }, "<C-v>", "p", vim.tbl_extend("force", opts, { desc = "Paste from clipboard" }))
 map("i", "<C-v>", "<Esc>pa", vim.tbl_extend("force", opts, { desc = "Insert mode: Paste from clipboard" }))
 
--- Ctrl + X for Cutting --
-vim.keymap.set("n", "<C-x>", "dd", vim.tbl_extend("force", opts, { desc = "Normal mode: Cut line" }))
-vim.keymap.set("v", "<C-x>", "d", vim.tbl_extend("force", opts, { desc = "Visual mode: Cut selection" }))
-vim.keymap.set("i", "<C-x>", "<Esc>ddi", vim.tbl_extend("force", opts, { desc = "Insert mode: Cut line" }))
-
+-- Ctrl + X for Cutting -
+vim.keymap.set("v", "<C-x>", "d",  { desc = "Visual mode: Cut selection" })
+vim.keymap.set("i", "<C-x>", "<Esc>ddi", { desc = "Insert mode: Cut line" })
+vim.keymap.set("n", "<C-x>", "dd", { desc = "Normal mode: Cut line" })
+vim.keymap.set("n", "xx", "dd", { desc = "Normal mode: Cut word" })
 -- Visual mode indenting
 vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
@@ -60,15 +61,22 @@ vim.keymap.set("n", "<S-CR>", "o<Esc>", { desc = "Shift+Enter: new line below (n
 vim.keymap.set("n", "<M-CR>", "O<Esc>", { desc = "Alt+Enter: new line above (normal)" })
 
 
-
 -------------------- NAVIGATIONS --------------------
--- HJKL to WASD Movement --
+-- HJKL to wsad Movement --
 vim.keymap.set({ "n", "v" }, "w", "k", { noremap = true, desc = "Move up" })
 vim.keymap.set({ "n", "v" }, "a", "h", { noremap = true, desc = "Move left" })
 vim.keymap.set({ "n", "v" }, "s", "j", { noremap = true, desc = "Move down" })
 vim.keymap.set({ "n", "v" }, "d", "l", { noremap = true, desc = "Move right" })
 
--- Line movement with q and e --
+-- Shift + A / D → word jumps
+vim.keymap.set({ "n", "v" }, "A", "b", { noremap = true, desc = "Previous word" })
+vim.keymap.set({ "n", "v" }, "D", "w", { noremap = true, desc = "Next word" })
+
+-- Shift + W/S Half page scrolling
+vim.keymap.set({ "n", "v" }, "W", "<C-u>zz", { noremap = true, desc = "Half page up" })
+vim.keymap.set({ "n", "v" }, "S", "<C-d>zz", { noremap = true, desc = "Half page down" })
+
+-- Line movement with q and e -
 vim.keymap.set({ "n", "v" }, "q", "^", { desc = "Move to beginning of line" })
 vim.keymap.set({ "n", "v" }, "e", "$", { desc = "Move to end of line" })
 

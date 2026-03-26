@@ -11,20 +11,38 @@ return {
     config = function()
       require("neo-tree").setup({
         close_if_last_window = true,
+
         window = {
-          position = "right",   -- open on right side
+          position = "right", -- open on right side
           width = 32,
+
+          mappings = {
+            -- Movement (WASD style)
+            ["w"] = "prev",        -- move up
+            ["s"] = "next",        -- move down
+            ["a"] = "close_node",  -- close folder
+            ["d"] = "open",        -- open folder / file
+            ["o"] = "open",        -- open file
+
+            -- Create
+            ["n"] = "add",         -- create file or folder
+
+            -- Optional but nice to keep
+            ["r"] = "rename",
+            ["x"] = "delete",
+            ["q"] = "close_window",
+
+            -- Disable defaults you don't want
+            ["<space>"] = "none",
+          },
         },
+
         filesystem = {
           follow_current_file = {
             enabled = true,
           },
           hijack_netrw_behavior = "open_default",
-          -- filtered_items = {
-          --   visible = false,        -- This Enables the Hidden View.
-          --   hide_dotfiles = false,
-          --   hide_gitignored = false,
-          -- }, 
+          use_libuv_file_watcher = true,
         },
       })
 
@@ -33,4 +51,3 @@ return {
     end,
   },
 }
-

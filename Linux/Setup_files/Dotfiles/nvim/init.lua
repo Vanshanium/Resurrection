@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.keymap")
 
+-- TODO : Setup the Formatter. 
 
 --- General Configs ---- 
 

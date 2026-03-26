@@ -41,5 +41,5 @@ run('git config --global user.email "vansh.singh8272@gmail.com"')
 # 9. Show public key
 print("\n=== ADD THIS KEY TO GITHUB ===")
 print((key.with_suffix(".pub")).read_text())
-
 print("\n✅ Setup complete")
+
