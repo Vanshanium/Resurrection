@@ -3,6 +3,10 @@ local opts = { noremap = true, silent = true }
 
 
 ------------------- EDITING --------------------
+
+-- Macro -- 
+vim.keymap.set('n', 'n', 'q', { noremap = true })
+
 -- Finder --
 
 vim.keymap.set("n", "<C-f>", function()

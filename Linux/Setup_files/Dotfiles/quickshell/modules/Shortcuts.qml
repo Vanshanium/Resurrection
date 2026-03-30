@@ -27,7 +27,7 @@ Scope {
             v.launcher = v.dashboard = v.osd = v.utilities = !(v.launcher || v.dashboard || v.osd || v.utilities);
         }
     }
-
+    // quickshell ipc call drawers toggle dashboard
     CustomShortcut {
         name: "dashboard"
         description: "Toggle dashboard"
@@ -38,7 +38,7 @@ Scope {
             visibilities.dashboard = !visibilities.dashboard;
         }
     }
-
+    // quickshell ipc call drawers toggle session
     CustomShortcut {
         name: "session"
         description: "Toggle session menu"
@@ -49,7 +49,7 @@ Scope {
             visibilities.session = !visibilities.session;
         }
     }
-
+    // quickshell ipc call drawers toggle launcher
     CustomShortcut {
         name: "launcher"
         description: "Toggle launcher"
@@ -69,7 +69,7 @@ Scope {
         onPressed: root.launcherInterrupted = true
     }
 
-
+    // quickshell ipc call drawers toggle sidebar 
     CustomShortcut {
         name: "sidebar"
         description: "Toggle sidebar"
@@ -80,7 +80,7 @@ Scope {
             visibilities.sidebar = !visibilities.sidebar;
         }
     }
-
+    // quickshell ipc call drawers toggle utilities 
     CustomShortcut {
         name: "utilities"
         description: "Toggle utilities"
@@ -92,6 +92,10 @@ Scope {
         }
     }
 
+
+    // Inter-Process Communication, this helps call functions during the runtime in qml, you can run it like 
+    // quickshell ipc call <Handler Name> <function of the handler>
+    // So from this I have quickshell ipc call drawers toggle launcher/session/dashboard
     IpcHandler {
         target: "drawers"
 
@@ -111,7 +115,8 @@ Scope {
             return Object.keys(visibilities).filter(k => typeof visibilities[k] === "boolean").join("\n");
         }
     }
-
+    
+    // Figure out what it does. 
     IpcHandler {
         target: "controlCenter"
 

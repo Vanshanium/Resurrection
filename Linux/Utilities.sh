@@ -25,7 +25,9 @@ if [[ $OS_NAME =~ Arch ]]; then
     Install wl-clipboard            # For clipboard management
     Install xclip                   # For clipboard management
     Install tesseract               # For OCR Hin and Eng 
-
+    Install orchis-theme            # GTK Theme
+    Install lxappearance
+    
     Install_yay visual-studio-code-bin
     Install_yay microsoft-edge-stable-bin
     Install_yay figma-linux-bin

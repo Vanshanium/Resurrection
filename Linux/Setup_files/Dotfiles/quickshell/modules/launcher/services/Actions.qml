@@ -35,6 +35,7 @@ Searcher {
         readonly property bool dangerous: modelData.dangerous ?? false
 
         function onClicked(list: AppList): void {
+            console.log("Clicked:", name, command);
             if (command.length === 0)
                 return;
 
