@@ -1,6 +1,6 @@
 -- This Plugin is for LSP (Language Server Protocol) Configuration --
 return {
-  -- Mason (installer)
+  -- Mason (It is the LSP Manager!)
   {
     "williamboman/mason.nvim",
     config = function()
@@ -16,8 +16,8 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "pyright",
-          "lua_ls",
           "clangd",
+          "ts_ls",
         },
       })
     end,
@@ -33,7 +33,7 @@ return {
 
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- Go to defination of Function or Variables
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) -- Refrences of any variable of a function 
-        vim.keymap.set("n", "<C-q>", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "'", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<C-r>", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "<C-t>", vim.lsp.buf.code_action, opts)
         
@@ -43,21 +43,12 @@ return {
       vim.lsp.config.pyright = {
         on_attach = on_attach,
       }
-
-      -- Lua (Neovim)
-      vim.lsp.config.lua_ls = {
-        on_attach = on_attach,
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { "vim" },
-            },
-          },
-        },
-      }
-
       -- C / C++
       vim.lsp.config.clangd = {
+        on_attach = on_attach,
+      }
+      -- TypeScript/Javascript 
+      vim.lsp.config.ts_ls= {
         on_attach = on_attach,
       }
     end,

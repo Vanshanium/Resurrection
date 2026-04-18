@@ -5,9 +5,13 @@ local opts = { noremap = true, silent = true }
 ------------------- EDITING --------------------
 
 -- Macro -- 
-vim.keymap.set('n', 'n', 'q', { noremap = true })
+-- Do not use n for macro, it is used in next when searching something
+-- vim.keymap.set('n', 'n', 'q', { noremap = true })
 
--- Finder --
+-- Diagnostics  ALT + / -- 
+vim.keymap.set("n", "<M-/>", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics (Telescope)" })
+
+-- Finder CTRL + F --
 
 vim.keymap.set("n", "<C-f>", function()
   require("telescope.builtin").current_buffer_fuzzy_find()

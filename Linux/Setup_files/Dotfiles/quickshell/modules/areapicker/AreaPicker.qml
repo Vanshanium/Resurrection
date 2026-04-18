@@ -7,6 +7,8 @@ import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
 
+
+// This is the Picker that is use for screenshots and Screenrecording, I will remove this in future. 
 Scope {
     LazyLoader {
         id: root

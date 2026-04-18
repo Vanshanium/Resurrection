@@ -5,74 +5,107 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "macchiato", -- "latte", "frappe", "macchiato", "mocha"
-        transparent_background = true, 
-        float = {
-        transparent = true, -- enable transparent floating windows
-        solid = false, -- use solid styling for floating windows, see |winborder|
+
+        flavour = "macchiato",
+        transparent_background = true,
+
+        color_overrides = {
+          macchiato = {
+            base = "#000000",      -- main background
+            mantle = "#2c2f36",    -- slightly, This is from my kitty theme
+            crust = "#1e1ee9",     -- darkest
+
+            text = "#ecfbf9",
+            subtext0 = "#aaafcc",
+            subtext1 = "#878db2",
+
+            surface0 = "#545a64", -- This is for the Treesitter selection highlight
+            surface1 = "#545a64", -- This is for the CursorLine highlight
+
+            overlay0 = "#7f849c",
+            overlay1 = "#7f849c",
+            overlay2 = "#9399b2",
+
+            blue = "#a5c8ff",
+            lavender = "#b4befe",
+            teal = "#94e2d5",
+
+            green = "#93deab",
+            yellow = "#fcdb94",
+            peach = "#ffbd94",
+            red = "#f38ba8",
+
+            mauve = "#a58ae0",
+            pink = "#f5c2e7",
+          },
         },
-        term_colors = false,
-        
-        -- Dont Give a fuck what this does--
-        dim_inactive = {
-          enabled = false, -- dims the background color of inactive window
-          shade = "dark",
-          percentage = 0.15, -- percentage of the shade to apply to the inactive window
-         },
-        
-        -- Apply Styles to Different Programming Segments--
-        styles = { 
-          comments = { "italic" }, 
+
+        --------------------------------------------------
+        -- 🧩 2. CUSTOM HIGHLIGHTS (REAL POWER)
+        --------------------------------------------------
+        custom_highlights = function(colors)
+          return {
+            -- 🌌 Editor UI
+            Normal = { bg = "NONE" },
+            CursorLine = { bg = colors.surface0 },
+            LineNr = { fg = colors.overlay1 },
+            CursorLineNr = { fg = colors.mauve, style = { "bold" } },
+
+            -- 💬 Code styling
+            Comment = { fg = colors.overlay1, style = { "italic" } },
+            Keyword = { fg = colors.red, style = { "bold" } },
+            String = { fg = colors.green, style = { "italic" } },
+            Function = { fg = colors.blue },
+            Identifier = { fg = colors.lavender },
+
+
+            -- Progarming languages (Treesitter)
+            ["@keyword"] = { fg = colors.red, style = { "bold" } },
+            ["@keyword.import"] = { fg = colors.red, style = { "bold" } },
+            ["@punctuation.delimiter"] = { fg = colors.lavender }, -- , ; .
+            ["@punctuation.bracket"]   = { fg = colors.yellow },    -- () [] {}
+            ["@punctuation.special"]   = { fg = colors.peach },      -- special chars
+
+            -- 🔥 Diagnostics (LSP)
+            DiagnosticError = { fg = colors.red },
+            DiagnosticWarn = { fg = colors.yellow },
+            DiagnosticInfo = { fg = colors.blue },
+            DiagnosticHint = { fg = colors.teal },
+
+            -- 🪟 Floating windows
+            NormalFloat = { bg = colors.mantle },
+            FloatBorder = { fg = colors.red, bg = colors.mantle },
+            Pmenu = { bg = colors.mantle },
+            PmenuSel = { bg = colors.surface0 },
+
+            -- 🔍 Visual selection
+            Visual = { bg = colors.surface1 },
+
+            -- 🌲 NvimTree / file explorer
+            NvimTreeFolderName = { fg = colors.lavender },
+            NvimTreeRootFolder = { fg = colors.mauve, style = { "bold" } },
+          }
+        end,
+
+        --------------------------------------------------
+        -- 🧠 3. STYLE SETTINGS (you already had these)
+        --------------------------------------------------
+        styles = {
+          comments = { "italic" },
           conditionals = { "bold" },
-          loops = {"bold"},
-          functions = {},
-          keywords = {},
-          strings = {"italic"},
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-          operators = {},
-          -- miscs = {}, -- Uncomment to turn off hard-coded styles
-        }, 
-
-        -- Find What this does and Write something here.
-        lsp_styles = { 
-              virtual_text = {
-                errors = { "italic" },
-                hints = { "italic" },
-                warnings = { "italic" },
-                information = { "italic" },
-                ok = { "italic" },
-            },
-            underlines = {
-                errors = { "underline" },
-                hints = { "underline" },
-                warnings = { "underline" },
-                information = { "underline" },
-                ok = { "underline" },
-            },
-            inlay_hints = {
-                background = true,
-            },
+          loops = { "bold" },
+          strings = { "italic" },
         },
-        color_overrides = {},
-        custom_highlights = {},
-        default_integrations = true,
-        auto_integrations = false,
-        integrations = {
-            cmp = true,
-            gitsigns = true,
-            nvimtree = true,
-            notify = false,
-            mini = {
-                enabled = true,
-                indentscope_color = "",
-            },
-            -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-        }, 
 
+        --------------------------------------------------
+        -- 🔌 Integrations
+        --------------------------------------------------
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          nvimtree = true,
+          mini = true,
+        },
       })
 
       vim.cmd.colorscheme("catppuccin-macchiato")

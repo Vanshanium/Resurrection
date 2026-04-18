@@ -125,7 +125,7 @@
     }
   },
   "bar": {
-    "persistent": true,
+    "persistent": false,
     "showOnHover": true,
     "dragThreshold": 20,
     "scrollActions": {

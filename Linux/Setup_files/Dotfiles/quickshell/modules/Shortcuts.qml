@@ -116,7 +116,7 @@ Scope {
         }
     }
     
-    // Figure out what it does. 
+    // It Open the Control Center. The one in the Settings.  
     IpcHandler {
         target: "controlCenter"
 
@@ -129,6 +129,7 @@ Scope {
         target: "toaster"
 
         function info(title: string, message: string, icon: string): void {
+            // This is the Toaster Notification ? 
             Toaster.toast(title, message, icon, Toast.Info);
         }
 
