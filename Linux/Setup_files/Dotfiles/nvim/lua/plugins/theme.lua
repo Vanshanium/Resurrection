@@ -1,3 +1,4 @@
+-- This theme gives me the total control over the theme of the Neovim. 
 return {
   {
     "catppuccin/nvim",

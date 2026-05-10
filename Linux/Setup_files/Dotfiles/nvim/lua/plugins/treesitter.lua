@@ -17,6 +17,7 @@ return {
           "html",
           "css",
           "r",
+          "sql",
         },
         highlight = { enable = true },
         indent = { enable = true },

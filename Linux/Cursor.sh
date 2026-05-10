@@ -1,3 +1,4 @@
+# This script is used to set up the Bibata Cursor theme on a Linux system.
 source ./Variables.sh
 
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz

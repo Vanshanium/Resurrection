@@ -1,3 +1,4 @@
+-- This plugin is the just the first thing you will see on the screen,
 return {
   "goolord/alpha-nvim",
   lazy = false,

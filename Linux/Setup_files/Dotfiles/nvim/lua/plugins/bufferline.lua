@@ -1,3 +1,4 @@
+-- This Plugin if for managing buffers (multiple files). 
 return {
   "akinsho/bufferline.nvim",
   version = "*",

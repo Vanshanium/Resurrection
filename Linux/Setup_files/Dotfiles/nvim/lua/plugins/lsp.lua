@@ -1,4 +1,5 @@
 -- This Plugin is for LSP (Language Server Protocol) Configuration --
+-- Learn about the LSPs from my notes.
 return {
   -- Mason (It is the LSP Manager!)
   {

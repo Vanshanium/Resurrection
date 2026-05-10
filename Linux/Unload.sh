@@ -1,3 +1,5 @@
+#!/bin/bash
+# This script is used to set up the system with various utilities and configurations. It prompts the user for each setup step and allows them to skip if they choose.
 source ./Variables.sh
 
 

@@ -1,3 +1,5 @@
+-- The Name clears it all. 
+-- Make the Colors Global.
 return {
   {
     "lukas-reineke/indent-blankline.nvim",

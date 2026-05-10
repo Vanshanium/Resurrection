@@ -54,8 +54,5 @@ return {
       require("ufo").openAllFolds()
     end, { desc = "Unfold all" })
 
-    vim.keymap.set("n", "zp", function()
-      require("ufo").peekFoldedLinesUnderCursor()
-    end, { desc = "Preview fold" })
   end,
 }

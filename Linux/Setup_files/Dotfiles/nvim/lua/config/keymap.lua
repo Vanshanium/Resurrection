@@ -107,3 +107,10 @@ vim.keymap.set("n", "<A-s>", ":m .+1<CR>==", { desc = "Move line down" })
 -- VISUAL mode: move selected lines
 vim.keymap.set("v", "<A-w>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 vim.keymap.set("v", "<A-s>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+
+
+-- Split Navigation --
+vim.keymap.set("n", "<C-j>", "<C-w>h", { desc = "Move to left split" })
+vim.keymap.set("n", "<C-k>", "<C-w>j", { desc = "Move to below split" })
+vim.keymap.set("n", "<C-i>", "<C-w>k", { desc = "Move to above split" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })

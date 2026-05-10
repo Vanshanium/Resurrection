@@ -1,3 +1,4 @@
+-- This is a Plugin of Nvim Blink for autocompletion of code. It gives a small suggestion box.
 return {
   {
   'saghen/blink.cmp',

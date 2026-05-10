@@ -1,3 +1,4 @@
+# This script is used to set up SSH keys for GitHub and test the connection.
 source ./Variables.sh                                       # Loads Install command. 
 
 write_green "Downloading Required Packages \n"

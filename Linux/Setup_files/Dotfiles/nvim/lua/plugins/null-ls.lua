@@ -1,3 +1,4 @@
+-- This is the Plugin of Null-ls for formatting and linting without LSP servers --
 return {
   "nvimtools/none-ls.nvim",
   dependencies = {
